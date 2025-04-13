@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "stock-index"
+version = "0.1.0"
+description = ""
+authors = ["Ishan Pandey <ishanpandey95@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.115.12"
+duckdb = "^1.2.2"
+redis = "^5.2.1"
+polygon-api-client = "^1.14.4"
+uvicorn = "^0.34.1"
+openpyxl = "^3.1.5"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

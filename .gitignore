@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+.env
+.venv
+venv/
+env/
+*.sqlite3
+*.db
+*.duckdb
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# Redis dump (if file-based)
+dump.rdb
+
+# MacOS
+.DS_Store
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Poetry
+poetry.lock
+*.pdm.toml
+
+# Docker
+*.pid
+*.sock
+
+# Local Data/Exports
+index_data_*.xlsx
+*.parquet
+*.csv
+
+# System files
+Thumbs.db
+ehthumbs.db
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
