@@ -2,8 +2,10 @@ import pandas as pd
 import os
 import tempfile
 from src.app.db.repositories.base_repository import BaseIndexRepository
+from src.app.utils.cache import cache_result
 
 
+@cache_result
 def export_to_excel(repo: BaseIndexRepository, start_date: str, end_date: str) -> tuple[str, str]:
     file_name = f"index_data_{start_date}_to_{end_date}.xlsx"
     file_path = os.path.join(tempfile.gettempdir(), file_name)
@@ -32,4 +34,3 @@ def export_to_excel(repo: BaseIndexRepository, start_date: str, end_date: str) -
         changes_df.to_excel(writer, sheet_name="Changes", index=False)
 
     return file_name, file_path
-
