@@ -36,7 +36,7 @@ def get_composition_changes(start_date: date, end_date: date):
 
 @router.post("/export-data")
 def export_data(start_date: date, end_date: date):
-    file_name, file_path = export_to_excel(repo, start_date.isoformat(), end_date.isoformat())
+    file_name, file_path = export_to_excel(performance_service, start_date.isoformat(), end_date.isoformat())
     return FileResponse(
         path=file_path,
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
